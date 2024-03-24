@@ -14,13 +14,13 @@ done
 cat $whitelist | while read -r whitelist; do
 
   echo "adding $whitelist to whitelist"
-    pihole -w --comment "automated" $whitelist
+  pihole -w --comment "automated" $whitelist
 done
 
 cat $blacklist | while read -r blacklist; do
 
   echo "adding $blacklist to blacklist"
-    pihole -b --comment "automated" $blacklist
+  pihole -b --comment "automated" $blacklist
 done
 
 # Reload Pi-hole gravity database to reflect changes
