@@ -1,8 +1,8 @@
 #!/bin/bash
 
-adlist="/etc/pihole/adlist.txt"
-whitelist="/etc/pihole/whitelist.txt"
-blacklist="/etc/pihole/blacklist.txt"
+adlist="adlist.txt"
+whitelist="whitelist.txt"
+blacklist="blacklist.txt"
 
 cat $adlist | while read -r line; do
 
