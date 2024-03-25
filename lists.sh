@@ -8,7 +8,7 @@ cat $adlist | while read -r line; do
 
   # Insert line into adlist table
   echo "adding $line to gravity"
-  sudo sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (address, enabled, comment) VALUES ('$line', 1, 'automated');"
+  sudo sqlite3 /etc/pihole/gravity.db "INSERT OR REPLACE INTO adlist (address, enabled, comment) VALUES ('$line', 1, 'automated');"
 done
 
 cat $whitelist | while read -r whitelist; do
